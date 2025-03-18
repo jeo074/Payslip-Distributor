@@ -1,0 +1,10 @@
+.venv
+.idea
+__pycache__
+resource.py
+*token.json
+*client_secret.json
+*service_account_key.json
+*../Logs/*
+*../Tool logs/*
+*../Files/Finished/*
