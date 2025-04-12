@@ -12,3 +12,4 @@ service_account_key.json
 token.json
 .idea/
 __pycache__/
+*.env

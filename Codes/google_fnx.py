@@ -22,6 +22,7 @@ from dotenv import load_dotenv
 load_dotenv()
 app_pw = os.getenv("app_pw") # GCP app password
 
+
 def goog_auth(SCOPES, SERVICE_ACCOUNT_KEY_FILE): # ,CLIENT_FILE):
     creds = None
     ''' For non-service accounts

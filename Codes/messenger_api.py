@@ -55,4 +55,3 @@ def send_attachment(msgr, psid, file_path):
                     (None, 'CONFIRMED_EVENT_UPDATE'), 'message': (None, {'attachment': {'type': 'file', 'payload': {}}})}
     url = 'https://graph.facebook.com/v{}/{}/messages?access_token={}'.format(fb_api_version, messenger_page_id, page_access_token)
     return msgr.post(url, data=request_data, files=file)
-
