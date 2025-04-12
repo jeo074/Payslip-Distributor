@@ -1,6 +1,13 @@
+import os
+
 from constant import *
-from resource import messenger_page_id, page_access_token
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
+messenger_page_id = os.getenv("messenger_page_id")
+page_access_token = os.getenv("page_access_token")
+
 
 def get_psids(msgr, fb_accounts):
     total_accounts = len(fb_accounts)

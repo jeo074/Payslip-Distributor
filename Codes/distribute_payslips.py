@@ -16,12 +16,18 @@ from googleapiclient.discovery import build
 from messenger_api import send_message, send_attachment, get_psids
 from google_fnx import goog_auth, get_spreadsheet_data, get_sheet_values
 from google_fnx import get_file_id, create_file, send_email, update_spreadsheet
+from dotenv import load_dotenv
 
-# CREATE YOUR OWN "resource.py"
 # logs_folder_id & tool_logs_folder_id - Google Drive folders for logs
 # spreadsheet_id - Google Spreadsheet to get data like column index
 # PSID_sheet_id - messenger PSIDs
-from resource import sender_email, PSID_sheet_id, logs_folder_id, spreadsheet_id, tool_logs_folder_id
+
+load_dotenv()
+sender_email = os.getenv("sender_email")
+PSID_sheet_id = os.getenv("PSID_sheet_id")
+logs_folder_id = os.getenv("logs_folder_id")
+spreadsheet_id = os.getenv("spreadsheet_id")
+tool_logs_folder_id = os.getenv("tool_logs_folder_id")
 
 
 def get_headers(spreadsheet_data, sheets, sheet_name):
